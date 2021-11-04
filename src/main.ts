@@ -8,3 +8,5 @@ function myFunction(): void {
 function reverseText(str: string): string {
     return str.split("").reverse().join("");
 }
+
+document.getElementById('reverseButton').addEventListener('click', () => myFunction());
