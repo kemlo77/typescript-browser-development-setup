@@ -7,7 +7,9 @@
     "build": "webpack-dev-server",
     "build:prod": "webpack",
     "test": "mocha --recursive",
-    "specificTest": "mocha test/**/difficult.spec.ts"
+    "specificTest": "mocha test/**/difficult.spec.ts",
+    "coverage": "nyc npm run test",
+    "coverageSpecificTest": "nyc mocha test/**/difficult.spec.ts"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.4",
     "mocha": "^9.1.3",
+    "nyc": "^15.1.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4",
