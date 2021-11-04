@@ -1,3 +1,5 @@
+import './style.css';
+
 function myFunction(): void {
     const inputElement = (document.getElementById("textInput") as HTMLInputElement);
     const inputText = inputElement.value;
