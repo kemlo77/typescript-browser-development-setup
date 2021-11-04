@@ -2,9 +2,9 @@ import './style.css';
 import { reverseText } from './reverse';
 
 function myFunction(): void {
-    const inputElement = (document.getElementById("textInput") as HTMLInputElement);
-    const inputText = inputElement.value;
-    const reversedText = reverseText(inputText);
+    const inputElement: HTMLInputElement = (document.getElementById('textInput') as HTMLInputElement);
+    const inputText: string = inputElement.value;
+    const reversedText: string = reverseText(inputText);
     inputElement.value = reversedText;
 }
 
