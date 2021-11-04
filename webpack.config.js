@@ -9,6 +9,9 @@ module.exports = {
     entry: './src/main.ts',
     mode: 'development',
     devtool: 'source-map',
+    devServer: {
+        port: 5600
+    },
     module: {
         rules: [
             {
