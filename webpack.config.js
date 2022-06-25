@@ -12,6 +12,10 @@ module.exports = {
     devServer: {
         port: 5600
     },
+    plugins: [
+        new HtmlWebpackPlugin({ template: './src/template.html' }),
+        new MiniCssExtractPlugin({ filename: 'style.css' })
+    ],
     module: {
         rules: [
             {
@@ -28,7 +32,7 @@ module.exports = {
                 use: ['html-loader']
             },
             {
-                test: /\.(jpg|png)$/,
+                test: /\.(jpe?g|png|gif)$/,
                 type: 'asset/resource'
             }
         ],
@@ -42,8 +46,4 @@ module.exports = {
         clean: true,
         assetModuleFilename: 'images/[name].[ext]'
     },
-    plugins: [
-        new HtmlWebpackPlugin({ template: './src/template.html' }),
-        new MiniCssExtractPlugin({ filename: 'style.css' })
-    ]
 };
